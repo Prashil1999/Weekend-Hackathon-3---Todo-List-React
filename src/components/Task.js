@@ -8,7 +8,6 @@ export default function Task(props) {
   };
   let handleSave = () => {
     if (val === props.defaultValue || val === "") {
-      setIsEdit(false);
       return;
     }
     props.onSave(props.id, val);
