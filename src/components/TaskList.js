@@ -39,25 +39,23 @@ export default function TaskList() {
   };
   return (
     <>
-      <div id="">
-        <textarea
-          id="task"
-          onChange={onChangeTextValue}
-          value={textValue}
-        ></textarea>
-        <button id="btn" onClick={handleAddTask}>
-          add tasks
-        </button>
-        {taskList.map((task) => (
-          <Task
-            key={task.id}
-            id={task.id}
-            defaultValue={task.value}
-            onDelete={handleTaskDelete}
-            onSave={handleTaskUpdate}
-          />
-        ))}
-      </div>
+      <textarea
+        id="task"
+        onChange={onChangeTextValue}
+        value={textValue}
+      ></textarea>
+      <button id="btn" onClick={handleAddTask}>
+        add tasks
+      </button>
+      {taskList.map((task) => (
+        <Task
+          key={task.id}
+          id={task.id}
+          defaultValue={task.value}
+          onDelete={handleTaskDelete}
+          onSave={handleTaskUpdate}
+        />
+      ))}
     </>
   );
 }

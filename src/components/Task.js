@@ -15,18 +15,19 @@ export default function Task(props) {
   };
   return (
     <>
-      <div className="list">
+      <div>
         {!isEdit ? (
-          <span>{props.defaultValue}</span>
+          <span className="list">{props.defaultValue}</span>
         ) : (
           <textarea
+            className="editTask"
             value={val}
             onChange={(event) => setVal(event.target.value)}
           ></textarea>
         )}
 
         {isEdit ? (
-          <button className="edit" onClick={handleSave}>
+          <button className="saveTask" onClick={handleSave}>
             save
           </button>
         ) : (
